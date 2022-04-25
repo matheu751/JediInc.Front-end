@@ -1,6 +1,6 @@
 **⦁ Back-end:** Python | Django Framework <p>
 **⦁ Front-end:** Angular <p>
-**⦁ Persistência:** <p>
+**⦁ Persistência:** sqlite <p>
 
 **Requisitos:** <p>
     ⦁ Python 3.10.4 + <p>
