@@ -1,0 +1,59 @@
+<div class="container">
+<ul class="navbar-nav">
+    <li class="navbar-item">
+        <button routerLink="/projeto" class="m-1 btn btn-dark btn-outline-primary " Button>CADASTRAR</button>
+    </li>
+</ul>
+</div>
+<table class="table table-dark">
+    <thead>
+        <tr>  
+            <th> ID Projeto  </th>
+            <th> Nome </th>
+            <th> Data de Início </th>
+            <th> Data de Término </th>
+            <th> Valor </th>
+            <th> Risco </th>
+            <th> Participantes </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let dataItem of listProjetos"> 
+        <td> {{dataItem.ProjectID}}</td>
+        <td> {{dataItem.ProjectName}}</td>
+        <td> {{dataItem.ProjectBeginning}}</td>
+        <td> {{dataItem.ProjectEnd}}</td>
+        <td> {{dataItem.Value}}</td>
+        <td> {{dataItem.Risk}}</td>
+        <td> {{dataItem.Participants}}</td>
+        <td>
+            <div class="navbar-item">
+                <button type="button" (click)="onDelete(dataItem.ProjectID)" class="m-1 btn btn-dark btn-outline-primary" Button> DELETAR </button>
+                <button type="button" (click)="onEdit(dataItem.ProjectID)" class="m-1 btn btn-dark btn-outline-primary" Button> EDITAR </button>
+                <button type="button" class="m-1 btn btn-dark btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Simular Investimento
+                  </button>
+                  
+            </div>
+        </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Calcular Investimento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Calcular</button>
+        </div>
+      </div>
+    </div>
+  </div>

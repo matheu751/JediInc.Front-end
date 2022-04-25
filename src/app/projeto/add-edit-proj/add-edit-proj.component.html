@@ -1,0 +1,25 @@
+<form [formGroup]="projeto" (ngSubmit)="onSubmit()"> 
+  
+    <label for="name">Nome: </label>
+    <input id="name" type="text" formControlName="name" required> <p>
+   
+    <label for="startdate">Data de Início: </label>
+    <input id="startdate" type="date" formControlName="startdate"> <p>
+
+    <label for="enddate">Data de Término: </label>
+    <input id="enddate" type="date" formControlName="enddate"> <p>
+
+    <label for="value">Valor: </label>
+    <input id="value" type="text" formControlName="value"><p>
+
+    <label for="risk">Risco: </label>
+    <input type="radio" value="0" formControlName="risk"> 0<p>
+    <input type="radio" value="1" formControlName="risk"> 1 <p>
+    <input type="radio" value="2" formControlName="risk"> 2<p>
+
+    <label for="participants">Participantes: </label>
+    <input id="participants" type="text" formControlName="participants"> <p>
+     
+    <input type="submit">
+</form>
+  
